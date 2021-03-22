@@ -1,0 +1,14 @@
+version: 2
+jobs:
+  build-and-test:
+    macOS:
+      xcode: "12.2.0"
+    steps:
+      - checkout
+      - run: echo "hello"
+workflows:
+  version: 2
+
+  feature_branch_checks:
+    jobs:
+      - build-and-test
