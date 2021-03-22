@@ -5,7 +5,7 @@ jobs:
       xcode: "12.2.0"
     steps:
       - checkout
-      - run: echo "hello"
+      - run: uname -a
 workflows:
   version: 2
 
