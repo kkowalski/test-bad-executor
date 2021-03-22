@@ -1,8 +1,10 @@
 version: 2
 jobs:
   build-and-test:
-    docker: true
-    dockerX: true
+    docker:
+      - image: "circleci/node:9.6.1"
+    dockerExecutorX:
+      - image: "circleci/node:9.6.1"
     steps:
       - checkout
       - run: uname -a
