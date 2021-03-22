@@ -1,8 +1,8 @@
 version: 2
 jobs:
   build-and-test:
-    macOS:
-      xcode: "12.2.0"
+    docker: true
+    dockerX: true
     steps:
       - checkout
       - run: uname -a
