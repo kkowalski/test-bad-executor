@@ -1,10 +1,8 @@
 version: 2
 jobs:
   build-and-test:
-    docker:
-      - image: "circleci/node:9.6.1"
-    dockerExecutorX:
-      - image: "circleci/node:9.6.1"
+    macos:
+      xcode: "11.3.0"
     steps:
       - checkout
       - run: uname -a
