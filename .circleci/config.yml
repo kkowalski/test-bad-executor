@@ -1,7 +1,7 @@
 version: 2
 jobs:
   build-and-test:
-    macos:
+    macOS:
       xcode: "11.3.4"
     steps:
       - checkout
