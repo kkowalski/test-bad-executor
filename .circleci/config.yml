@@ -2,7 +2,7 @@ version: 2
 jobs:
   build-and-test:
     macOS:
-      xcode: "11.3.4"
+      xcode: "11.3.0"
     steps:
       - checkout
       - run: uname -a
