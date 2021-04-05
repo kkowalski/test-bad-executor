@@ -1,8 +1,9 @@
 version: 2
 jobs:
   build-and-test:
-    macOS:
-      xcode: "11.3.0"
+    machine:
+      image: ubuntu-2004:202010-01
+    resource_class: lala
     steps:
       - checkout
       - run: uname -a
