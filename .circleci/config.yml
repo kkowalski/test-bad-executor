@@ -2,14 +2,14 @@ version: 2
 jobs:
   build-and-test:
     machine:
-      image: ubuntu-2004:202010-01
+      image: ubuntu-2004:202104-01
     steps:
       - checkout
       - run:
           name: install
           command: |
             DEBIAN_FRONTEND=noninteractive
-            sudo apt-get update -y && sudo apt-get upgrade -y
+            sudo apt-get update -y
             sudo apt-get install apt-transport-https
             sudo apt install virtualbox virtualbox-ext-pack
             sudo apt-get install -y kubectl
