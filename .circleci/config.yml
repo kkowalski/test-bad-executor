@@ -5,13 +5,15 @@ jobs:
       image: ubuntu-2004:202010-01
     steps:
       - checkout
-      - run: |
-        DEBIAN_FRONTEND=noninteractive
-        sudo apt-get update -y && sudo apt-get upgrade -y
-      - run: sudo apt-get install apt-transport-https
-      - run: sudo apt install virtualbox virtualbox-ext-pack
-      - run: sudo apt-get install -y kubectl
-      - run: sudo dpkg -i minikube_latest_amd64.deb && minikube version
+      - run:
+          name: install
+          command: |
+            DEBIAN_FRONTEND=noninteractive
+            sudo apt-get update -y && sudo apt-get upgrade -y
+            sudo apt-get install apt-transport-https
+            sudo apt install virtualbox virtualbox-ext-pack
+            sudo apt-get install -y kubectl
+            sudo dpkg -i minikube_latest_amd64.deb && minikube version
 
 workflows:
   version: 2
