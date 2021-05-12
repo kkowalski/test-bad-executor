@@ -3,10 +3,13 @@ jobs:
   build-and-test:
     machine:
       image: ubuntu-2004:202010-01
-    resource_class: lala
     steps:
       - checkout
-      - run: uname -a
+      - run: sudo apt-get update -y
+      - run: sudo apt-get upgrade -y
+      - run: sudo apt-get install apt-transport-https
+      - run: sudo apt install virtualbox virtualbox-ext-pack
+
 workflows:
   version: 2
 
