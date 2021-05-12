@@ -11,7 +11,7 @@ jobs:
             DEBIAN_FRONTEND=noninteractive
             sudo apt-get update -y
             sudo apt-get install apt-transport-https
-            sudo apt install virtualbox virtualbox-ext-pack
+            sudo apt install -y virtualbox
             sudo apt-get install -y kubectl
             sudo dpkg -i minikube_latest_amd64.deb && minikube version
 
